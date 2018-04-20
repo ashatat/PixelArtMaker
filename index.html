@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ondragstart="return false" ondrop="return false">
+    <header>
+        <h1><span>P</span>ixel <span>A</span>rt <span>M</span>aker</h1>
+    </header>
+
+    <section class="side-panel">
+        <section>
+            <form id="sizePicker">
+                <h2>Grid Size</h2>
+                Height:
+                <br>
+                <input type="number" id="inputHeight" name="height" min="1" max="40" value="10">
+                <br>
+                Width:
+                <br>
+                <input type="number" id="inputWidth" name="width" min="1" max="40" value="10">
+                <br>
+                <input type="submit">
+            </form>
+        </section>
+        <section class="color-picker cf">
+            <h2>Pick A Color</h2>
+            <input type="color" id="colorPicker">
+        </section>
+        <section>
+            <button type="button" id="clearGrid">Clear Canvas</button>
+            <button type="button" id="gridBackground">Canvas Background</button>
+            <button type="button" id="instructions">Show instructions</button>
+        </section>
+    </section>
+    
+    <div class="instructions" id="overlay">
+        <h2>Features:</h2>
+        <ul>
+            <li>Your work session will won't disapear if you hit refresh button.</li>
+            <li>Hold mouse button function - will draw continuously.</li>
+            <li>Click mouse button function - will draw cell by cell.</li>
+            <li>Hold Right mouse button function - will erase continuously.</li>
+            <li>Click Right mouse button function or double click Left mouse button - will erase cell by cell.</li>
+            <li>Clear Canvas button - will clear the drawing area.</li>
+            <li>Canvas background button - will change the grid background color.</li>
+            <li>Show instrctions button - will show the instructons area.</li>
+            <li>Hide the insturcions area with a click anywhere.</li>
+        </ul>
+    </div>
+
+    <table id="pixelCanvas"></table>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="app3.js"></script>
+</body>
+</html>

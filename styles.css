@@ -1,0 +1,173 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+ 
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+
+
+header {
+    background-color: rgba(34, 34, 34, .99);
+    padding: 15px 0;
+    height: 80px;
+}
+
+h1 {
+    font-family: Monoton;
+    font-size: 30px;
+    margin: 0.2em;
+    margin-top: 0;
+    text-align: center;
+    color:white;
+}
+h1 > span {
+    color: #7AC88F;
+}
+
+.side-panel {
+    float: left;
+    width: 20%;
+    background: #222;
+    height: 80vh;
+}
+
+.side-panel > section {
+    background: #7AC88F;
+    margin-bottom: 20px;
+    padding: 5px 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+    font-size: 20px;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto 0;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input, button {
+
+    background: rgba(34, 34, 34, .99);
+    color: white;
+}
+input {
+    width: 100%;
+    padding: 3px 0;
+}
+input[type=number] {
+    width: 100%;
+    margin-bottom: 5px; 
+}
+button {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    padding: 3px 0;
+}
+/* ============================================================== */
+
+
+.instructions {
+    display: none;
+}
+
+#overlay {
+    background:#C75D10;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    text-align:center;
+    color: white;
+  }
+
+#overlay h2 {
+    font-size: 25px;
+    padding-top: 30px;
+} 
+  
+#overlay ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    text-align: left;
+}
+
+#overlay ul li {
+    color:#fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.color-picker div {
+    border: 1px solid #4a5158;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    float: left;
+    margin-top: 10px;
+}
+
